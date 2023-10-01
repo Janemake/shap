@@ -3,47 +3,53 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+Welcome to the SHAP documentation
+---------------------------------
+
 .. image:: artwork/shap_header.png
    :width: 600px
    :align: center
 
-
 **SHAP (SHapley Additive exPlanations)** is a game theoretic approach to explain the output of
 any machine learning model. It connects optimal credit allocation with local explanations
-using the classic Shapley values from game theory and their related extensions (see 
-[papers](https://github.com/slundberg/shap#citations) for details and citations.
+using the classic Shapley values from game theory and their related extensions (see
+`papers <https://github.com/shap/shap#citations>`_ for details and citations).
+
+Install
+=======
+
+SHAP can be installed from either `PyPI <https://pypi.org/project/shap>`_ or
+`conda-forge <https://anaconda.org/conda-forge/shap>`_::
+
+   pip install shap
+   or
+   conda install -c conda-forge shap
+
 
 .. toctree::
    :maxdepth: 2
+   :caption: Introduction
 
-Explainers
-=====================
+   Topical overviews <overviews>
 
-.. autoclass:: shap.TreeExplainer
-   :members:
+.. toctree::
+   :maxdepth: 2
+   :caption: Examples
 
-.. autoclass:: shap.GradientExplainer
-   :members:
+   Tabular examples <tabular_examples>
+   Text examples <text_examples>
+   Image examples <image_examples>
+   Genomic examples <genomic_examples>
 
-.. autoclass:: shap.DeepExplainer
-   :members:
+.. toctree::
+   :maxdepth: 2
+   :caption: Reference
 
-.. autoclass:: shap.KernelExplainer
-   :members:
+   API reference <api>
+   API examples <api_examples>
+   Benchmarks <benchmarks>
 
-.. autoclass:: shap.SamplingExplainer
-   :members:
+.. toctree::
+   :maxdepth: 1
 
-.. autoclass:: shap.PartitionExplainer
-   :members:
-   
-
-Plots
-=====================
-
-.. autofunction:: shap.summary_plot
-.. autofunction:: shap.dependence_plot
-.. autofunction:: shap.waterfall_plot
-.. autofunction:: shap.force_plot
-.. autofunction:: shap.image_plot
-.. autofunction:: shap.decision_plot
+   Release notes <release_notes>

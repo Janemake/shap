@@ -1,3 +1,13 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# shap/shap
 node_modules
 __pycache__
 shap.egg-info
@@ -8,16 +18,20 @@ shap.egg-info
 notebooks/local_scratch
 docs/local
 docs/_build
+docs/generated/
 .ipynb_checkpoints
 .eggs
-shap/_cext.cpython-36m-darwin.so
-shap/_cext.cpython-35m-darwin.so
+.ruff_cache
 javascript/build/*
 .vscode
-shap/_cext.so
 .DS_Store
 /notebooks/deep_explainer/mnist_data
 /data/CRIC*
 /docs/artwork/local
-/shap/_cext*
+shap/_cext*
 .idea
+catboost_info
+tests/local_scratch.py
+tests/mnist_data
+data/*
+**/.coverage*

@@ -1,16 +1,40 @@
+try:
+    import matplotlib  # noqa: F401
+except ImportError:
+    raise ImportError("matplotlib is not installed so plotting is not available! Run `pip install matplotlib` to fix this.")
 
-labels = {
-    'MAIN_EFFECT': "SHAP main effect value for\n%s",
-    'INTERACTION_VALUE': "SHAP interaction value",
-    'INTERACTION_EFFECT': "SHAP interaction value for\n%s and %s",
-    'VALUE': "SHAP value (impact on model output)",
-    'GLOBAL_VALUE': "mean(|SHAP value|) (average impact on model output magnitude)",
-    'VALUE_FOR': "SHAP value for\n%s",
-    'PLOT_FOR': "SHAP plot for %s",
-    'FEATURE': "Feature %s",
-    'FEATURE_VALUE': "Feature value",
-    'FEATURE_VALUE_LOW': "Low",
-    'FEATURE_VALUE_HIGH': "High",
-    'JOINT_VALUE': "Joint SHAP value",
-    'MODEL_OUTPUT': "Model output value"
-}
+from ._bar import bar
+from ._beeswarm import beeswarm
+from ._benchmark import benchmark
+from ._decision import decision
+from ._embedding import embedding
+from ._force import force, initjs
+from ._group_difference import group_difference
+from ._heatmap import heatmap
+from ._image import image, image_to_text
+from ._monitoring import monitoring
+from ._partial_dependence import partial_dependence
+from ._scatter import scatter
+from ._text import text
+from ._violin import violin
+from ._waterfall import waterfall
+
+__all__ = [
+    "bar",
+    "beeswarm",
+    "benchmark",
+    "decision",
+    "embedding",
+    "force",
+    "initjs",
+    "group_difference",
+    "heatmap",
+    "image",
+    "image_to_text",
+    "monitoring",
+    "partial_dependence",
+    "scatter",
+    "text",
+    "violin",
+    "waterfall",
+]
